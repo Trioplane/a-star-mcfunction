@@ -112,10 +112,10 @@ function pathfind(grid, start, goal) {
 function reconstructPath(node) {
     const path = [];
     while (node !== null) {
-        path.push(node);
+        path.push([node.x, node.y]);
         node = node.parent
     }
-    return path.map(node => [node.x, node.y])
+    return path
 }
 
 const map = new Grid(5,5)
